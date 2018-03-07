@@ -11,7 +11,7 @@ export const Info = (props: Props) => (
   <div>
     <Title title='Please tell us your name ...' icon='fa fa-id-card-o' />
     <div className='col-md-12'>
-      <select onChange={props.update} name='title' className='form-control'>
+      <select onBlur={props.update} autoFocus name='title' className='form-control'>
         <option disabled > select your title</option>
         {roles.map((item: string, i: number) => (<option key={i}>{item}</option>))}
       </select>
