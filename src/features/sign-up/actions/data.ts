@@ -6,7 +6,7 @@ export const NEXT_VIEW: string = 'NEXT_VIEW';
 // tslint:disable-next-line
 export const stateActions = {
   // tslint:disable-next-line
-  onStateChange(payload: { [key: string]: string }) {
+  onStateChange(payload: { [key: string]: string }): ActionWithPayload<{[key: string]: string}> {
     return {
       type: ADD_DATA,
       payload

@@ -6,3 +6,11 @@ type Data = {
   resident: string
 };
 
+type ViewState = {
+  viewIndex: number
+};
+
+type ActionWithPayload<T> = {
+  type: string,
+  payload: T
+}

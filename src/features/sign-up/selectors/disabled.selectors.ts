@@ -1,13 +1,12 @@
 import { createSelector } from 'reselect';
-import { View } from '../reducers/view.reducer';
 
-const getIndex: (state: ModuleStore) => View = ( state: ModuleStore) => state.viewReducer;
+const getIndex: (state: ModuleStore) => ViewState = ( state: ModuleStore) => state.viewReducer;
 
 const getData: (state: ModuleStore) => Data = ( state: ModuleStore) => state.dataReducer;
 
 // tslint:disable-next-line:typedef
 export const isDisabledSelector = createSelector( [getIndex, getData],
-  (view: View, data: Data) => {
+  (view: ViewState, data: Data) => {
     const { title, name, surname, resident, gender } = data;
     switch (view.viewIndex) {
       case 1:
